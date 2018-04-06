@@ -1,0 +1,7 @@
+# gradle-profiler downloads Gradle into this folder.
+gradle-user-home/
+
+# Benchmarks and profiling result dirs.
+profile-out*/
+
+.DS_Store

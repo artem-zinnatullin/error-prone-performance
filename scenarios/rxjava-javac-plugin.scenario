@@ -1,0 +1,16 @@
+assemble_baseline {
+    tasks = ["assemble"]
+    cleanup-tasks = ["clean"]
+    git-checkout = {
+        build = "baseline"
+    }
+}
+
+assemble_error_prone {
+    tasks = ["assemble"]
+    cleanup-tasks = ["clean"]
+    git-checkout = {
+        build = "error-prone-javac-plugin-default"
+    }   
+}
+

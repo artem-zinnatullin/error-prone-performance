@@ -82,6 +82,15 @@ dependencies {
     errorprone "com.google.errorprone:error_prone_core:2.2.0"
 }
 
+tasks.withType(JavaCompile) {
+    options.compilerArgs += [
+        '-Xep:ImmutableModification:OFF',
+        '-Xep:PrivateSecurityContractProtoAccess:OFF',
+        '-Xep:ShouldHaveEvenArgs:OFF',
+        '-Xep:OptionalNotPresent:OFF'
+    ]
+}
+
 javadoc {
     failOnError = false
     exclude "**/internal/**"

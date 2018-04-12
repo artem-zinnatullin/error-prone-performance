@@ -12,6 +12,7 @@ buildscript {
     classpath "me.champeau.gradle:jmh-gradle-plugin:0.4.4"
     classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3"
     classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.5.2"
+    classpath "net.ltgt.gradle:gradle-errorprone-javacplugin-plugin:0.1"
   }
 }
 
@@ -44,6 +45,7 @@ apply plugin: "com.github.hierynomus.license"
 apply plugin: "com.jfrog.bintray"
 apply plugin: "com.jfrog.artifactory"
 apply plugin: "eclipse"
+apply plugin: "net.ltgt.errorprone-javacplugin"
 
 sourceCompatibility = JavaVersion.VERSION_1_6
 targetCompatibility = JavaVersion.VERSION_1_6
@@ -76,6 +78,8 @@ dependencies {
     testImplementation "org.reactivestreams:reactive-streams-tck:$reactiveStreamsVersion"
     testImplementation "org.testng:testng:$testNgVersion"
     testImplementation "com.google.guava:guava:$guavaVersion"
+
+    errorprone "com.google.errorprone:error_prone_core:2.2.0"
 }
 
 javadoc {

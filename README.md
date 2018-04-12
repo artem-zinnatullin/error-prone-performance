@@ -63,6 +63,12 @@ Environment:
 - Error Prone with default settings: `10.699` sec, `2.15`x slower 🔻
 - Error Prone with most expensive checks disabled: `N/A` (haven't done yet)
 
+##### Median build time (Docker, Oracle JDK 9 9.0.4+1, Error Prone replaces JDK's `javac`)
+
+- baseline: `4.918` sec
+- Error Prone with default settings: `16.565` sec, `3.36`x slower 🔻
+- Error Prone with most expensive checks disabled: `3.33`x slower 🔻
+
 ### Graphs
 
 #### Benchmark Oracle JDK 8 1.8.0_161 (Error Prone replaces JDK's `javac`)
@@ -72,6 +78,10 @@ Environment:
 #### Benchmark Oracle JDK 9 9.0.4+1 (Error Prone as `javac` plugin)
 
 ![benchmark](assets/jdk9-javac-plugin/benchmark-rxjava-docker-jdk-9-javac-plugin.png)
+
+#### Benchmark Oracle JDK 9 9.0.4+1 (Error Prone replaces JDK's `javac`)
+
+![benchmark](assets/jdk9/benchmark-rxjava-docker-jdk-9.png)
 
 ## Project Structure
 

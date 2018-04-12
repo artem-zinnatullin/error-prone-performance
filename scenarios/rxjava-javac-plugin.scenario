@@ -10,7 +10,7 @@ assemble_error_prone {
     tasks = ["assemble"]
     cleanup-tasks = ["clean"]
     git-checkout = {
-        build = "error-prone-javac-plugin-default"
+        build = "rxjava/error-prone-javac-plugin-default"
     }   
 }
 

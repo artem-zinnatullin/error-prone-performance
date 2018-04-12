@@ -10,14 +10,14 @@ assemble_error_prone {
     tasks = ["assemble"]
     cleanup-tasks = ["clean"]
     git-checkout = {
-        build = "error-prone-default"
-    }   
+        build = "rxjava/error-prone-default"
+    }
 }
 
 assemble_error_prone_disable_expensive_checks {
     tasks = ["assemble"]
     cleanup-tasks = ["clean"]
     git-checkout = {
-        build = "error-prone-disable-expensive-checks"
+        build = "rxjava/error-prone-disable-expensive-checks"
     }   
 }

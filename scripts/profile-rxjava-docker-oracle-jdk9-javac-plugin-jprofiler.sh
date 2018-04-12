@@ -24,7 +24,7 @@ docker run \
 --rm \
 --volume "$DIR/..:/opt/projects/error-prone-performance" \
 --env LOCAL_USER_ID=$(id -u "$USER") \
-error-prone-performance-oracle-jdk8:latest \
+error-prone-performance-oracle-jdk9:latest \
 bash -c \
 "echo && echo && echo && \
 echo '!! Installing JProfiler (interactive), YOU MUST HAVE PROPER LICENSE TO USE IT !!' && \

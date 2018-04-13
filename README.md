@@ -8,7 +8,7 @@ Table of contents:
 
 - [Findings](#findings)
     - [Numbers](#numbers)
-    - []
+    - [Graphs](#graphs)
 - [Project Structure](#project-structure)
 - [How to reproduce results on your end](#how-to-reproduce-results-on-your-end)
 - [Why this project exists](#why-this-project-exists)
@@ -36,7 +36,38 @@ and
 
 Unfortunately, I wasn't able to find any other discussions of Error Prone performance (PRs welcome).
 
-My benchmarks, profilings and real-world integration experience show that Error Prone (2.2.0) has much more significant overhead on build times, in some cases up to `3.51`x slower (see details below).
+Benchmarks, profilings and real-world integration experience show that Error Prone (2.2.0) has much more significant overhead on build times (see details below).
+
+### What seems to cause Error Prone overhead?
+
+According to method call profiling (see below), Error Prone spends significant amount of time on this subset of checks:
+
+- [`PrivateSecurityContractProtoAccess.matchMethodInvocation`](https://github.com/google/error-prone/blob/v2.2.0/core/src/main/java/com/google/errorprone/bugpatterns/PrivateSecurityContractProtoAccess.java) 2.8% - 663 ms (Protobuf)
+- [`ImmutableModification.matchMethodInvocation`](https://github.com/google/error-prone/blob/v2.2.0/core/src/main/java/com/google/errorprone/bugpatterns/ImmutableModification.java) 2.4% - 551 ms (Guava)
+- [`ShouldHaveEvenArgs.matchMethodInvocation`](https://github.com/google/error-prone/blob/v2.2.0/core/src/main/java/com/google/errorprone/bugpatterns/ShouldHaveEvenArgs.java) 0.8% - 195 ms (Truth)
+- [`CollectionIncompatibleType.matchMethodInvocation`](https://github.com/google/error-prone/blob/v2.2.0/core/src/main/java/com/google/errorprone/bugpatterns/collectionincompatibletype/CollectionIncompatibleType.java) 0.6% - 142 ms (JDK)
+- [`NamedParameterChecker.matchMethodInvocation`](https://github.com/google/error-prone/blob/v2.2.0/core/src/main/java/com/google/errorprone/bugpatterns/argumentselectiondefects/NamedParameterChecker.java) 0.3% - 62,342 µs (JDK)
+
+While these checks might be relevant to lots of Google projects, only 2 of them are relevant to RxJava project. 
+
+Profiling Lyft projects where I tried to intgrate Error Prone gives similar results: lots of time is spent on checks that are not relevant to the codebase in the first place.
+
+#### Potential improvements
+
+##### Laziness
+
+I hope it's possible to optimize these checks by checking compilation classpath and excluding irrelevant checks from analysis. For example, whole category of Guava checks can be excluded if Guava is not found in compilation classpath.
+
+##### Parallelism
+
+I hope it's possible to parallelize AST analysis since Error Prone doesn't modify it by default. 
+
+Profiling suggests that compilation step where Error Prone does its work only uses single thread.
+
+---
+
+You can look at JProfiler output that I've put in [`assets`](assets/) folders to get more insights about expensive method calls.
+
 
 ### Numbers
 

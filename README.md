@@ -7,6 +7,8 @@ I integrate [Error Prone](https://github.com/google/error-prone) with RxJava and
 Table of contents:
 
 - [Findings](#findings)
+    - [Numbers](#numbers)
+    - []
 - [Project Structure](#project-structure)
 - [How to reproduce results on your end](#how-to-reproduce-results-on-your-end)
 - [Why this project exists](#why-this-project-exists)
@@ -57,17 +59,41 @@ Environment:
 - Error Prone with default settings: `14.922` sec, `3.57`x slower 🔻
 - Error Prone with most expensive checks disabled: `14.680` sec, `3.51`x slower 🔻
 
+##### Max "Used size" memory (Docker, Oracle JDK 8 1.8.0_161, Error Prone replaces JDK's `javac`)
+
+- baseline: `0.89` GB
+- Error Prone with default settings: `2.3` GB, `2.58`x memory used 🔻
+- Error Prone with most expensive checks disabled: `2.08` GB, `2.3`x memory used 🔻
+
+>Looks like Parallel GC doesn't play well with Error Prone and max memory usage spikes significantly, please see below results with G1 GC on JDK 9.
+
 ##### Median build time (Docker, Oracle JDK 9 9.0.4+1, Error Prone as `javac` plugin)
 
 - baseline: `4.963` sec
 - Error Prone with default settings: `10.699` sec, `2.15`x slower 🔻
-- Error Prone with most expensive checks disabled: `N/A` (haven't done yet)
+- Error Prone with most expensive checks disabled: `N/A` (haven't measured yet)
+
+##### Max "Used size" memory (Docker, Oracle JDK 9 9.0.4+1, Error Prone as `javac` plugin)
+
+- baseline: `1.1` GB
+- Error Prone with default settings: `1.08` GB, `0.98`x memory used ✅
+- Error Prone with most expensive checks disabled: `N/A` (haven't measured yet)
+
+>Looks like G1 GC is more agressive than Parallel GC and able to keep Error Prone's memory use even lower than baseline JDK compiler, however you can see on graphs that Error Prone caused more often garbage collection (I think it's fine if it doesn't affect performance, Error Prone does lots of useful work).
 
 ##### Median build time (Docker, Oracle JDK 9 9.0.4+1, Error Prone replaces JDK's `javac`)
 
 - baseline: `4.918` sec
 - Error Prone with default settings: `16.565` sec, `3.36`x slower 🔻
 - Error Prone with most expensive checks disabled: `3.33`x slower 🔻
+
+##### Max "Used size" memory (Docker, Oracle JDK 9 9.0.4+1, Error Prone replaces JDK's `javac`)
+
+- baseline: `1.14` GB
+- Error Prone with default settings: `1.01` GB, `0.88`x memory used ✅
+- Error Prone with most expensive checks disabled: `1.07` GB, `0.93`x memory used ✅
+
+>Same situation as above w/ JDK 9.
 
 ### Graphs
 
@@ -82,6 +108,45 @@ Environment:
 #### Benchmark Oracle JDK 9 9.0.4+1 (Error Prone replaces JDK's `javac`)
 
 ![benchmark](assets/jdk9/benchmark-rxjava-docker-jdk-9.png)
+
+#### Profile Oracle JDK 8 1.8.0_161 (Error Prone replaces JDK's `javac`)
+
+##### Baseline Memory
+
+![memory profile](assets/jdk8/profile-rxjava-docker-jdk8-baseline-memory.png)
+
+##### Error Prone Memory
+
+![memory profile](assets/jdk8/profile-rxjava-docker-jdk8-error-prone-memory.png)
+
+##### Error Prone Disable Expensive Checks Memory
+
+![memory profile](assets/jdk8/profile-rxjava-docker-jdk8-error-prone-disable-expensive-checks-memory.png)
+
+#### Profile Oracle JDK 9 9.0.4+1 (Error Prone replaces JDK's `javac`)
+
+##### Baseline Memory
+
+![memory profile](assets/jdk9/profile-rxjava-docker-jdk9-baseline-memory.png)
+
+##### Error Prone Memory
+
+![memory profile](assets/jdk9/profile-rxjava-docker-jdk9-error-prone-memory.png)
+
+##### Error Prone Disable Expensive Checks Memory
+
+![memory profile](assets/jdk9/profile-rxjava-docker-jdk9-error-prone-disable-expensive-checks-memory.png)
+
+#### Profile Oracle JDK 9 9.0.4+1 (Error Prone as `javac` plugin)
+
+##### Baseline Memory
+
+![memory profile](assets/jdk9-javac-plugin/profile-rxjava-docker-jdk9-baseline-memory.png)
+
+##### Error Prone Memory
+
+![memory profile](assets/jdk9-javac-plugin/profile-rxjava-docker-jdk9-error-prone-javac-plugin-memory.png)
+
 
 ## Project Structure
 

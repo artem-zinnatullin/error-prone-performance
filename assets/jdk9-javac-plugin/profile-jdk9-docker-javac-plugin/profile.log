@@ -1,0 +1,2440 @@
+
+* Started at 2018-04-12T23:33:25.077197Z
+
+* Settings
+Project dir: /opt/projects/error-prone-performance-copy/rxjava
+Output dir: profile-out-6
+Profiler: JProfiler
+Benchmark: false
+Versions: []
+Gradle User Home: gradle-user-home
+Targets: []
+
+* Locating default Gradle version
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@1db5ec56.*]
+:help
+
+Welcome to Gradle 4.6.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see a list of command-line options, run gradle --help
+
+To see more detail about a task, run gradle help --task <task>
+
+For troubleshooting, visit https://help.gradle.org
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 4s
+1 actionable task: 1 executed
+
+* Stopping daemons
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Scenarios
+Scenario: assemble_baseline using Gradle 4.6
+  Gradle version: 4.6 (/opt/projects/error-prone-performance/gradle-user-home/wrapper/dists/gradle-4.6-bin/4jp4stjndanmxuerzfseyb6wo/gradle-4.6)
+  Run using: ToolingApi
+  Cleanup Tasks: [clean]
+  Tasks: [assemble]
+  Gradle args: []
+  Build changes: GitCheckoutMutator(cleanup: null, build: baseline)
+  Warm-ups: 5
+  Builds: 1
+Scenario: assemble_error_prone using Gradle 4.6
+  Gradle version: 4.6 (/opt/projects/error-prone-performance/gradle-user-home/wrapper/dists/gradle-4.6-bin/4jp4stjndanmxuerzfseyb6wo/gradle-4.6)
+  Run using: ToolingApi
+  Cleanup Tasks: [clean]
+  Tasks: [assemble]
+  Gradle args: []
+  Build changes: GitCheckoutMutator(cleanup: null, build: rxjava/error-prone-javac-plugin-default)
+  Warm-ups: 5
+  Builds: 1
+
+* Running scenario assemble_baseline using Gradle 4.6 (scenario 1/2)
+
+* Stopping daemons
+No Gradle daemons are running.
+
+* Build details
+Gradle version: 4.6
+Java home: /usr/lib/jvm/java-9-oracle
+OS name: Linux 4.4.0-119-generic
+JVM args:
+  -Dfile.encoding=UTF-8
+  -Duser.country=US
+  -Duser.language=en
+  -Duser.variant
+  -Dorg.gradle.profiler.scenario=assemble_baseline
+  -agentpath:/home/build_user/jprofiler10/bin/linux-x64/libjprofilerti.so=offline,id=1,config=/tmp/jprofiler10894957520314340608.xml,sysprop=jprofiler.jmxServerPort=41950
+Gradle args:
+  -I
+  /tmp/gradleProfilerPidInstrumentation8992623972566703592.gradle
+  --gradle-user-home
+  /opt/projects/error-prone-performance/gradle-user-home
+> Resetting Git hard
+HEAD is now at b9a3315 Fix profiling scripts.
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+* Running warm-up build #1 with cleanup tasks [clean]
+JProfiler> WARNING: No authentication for JMX server specified.
+JProfiler> Pass -Djprofiler.jmxPasswordFile=<file> to set up authentication
+JProfiler> JMX server started, use jpcontroller to connect
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@5d1b1ddd.*]
+:clean UP-TO-DATE
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 5s
+1 actionable task: 1 up-to-date
+Used daemon with pid 976
+Execution time 6028 ms
+> Checking out baseline
+Switched to a new branch 'baseline'
+Branch baseline set up to track remote branch baseline from origin.
+
+* Running warm-up build #1 with build tasks [assemble]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@ae41a09.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 12s
+6 actionable tasks: 6 executed
+Used daemon with pid 976
+Execution time 12033 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Running warm-up build #2 with cleanup tasks [clean]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@767f57d4.*]
+:clean
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 0s
+1 actionable task: 1 executed
+Used daemon with pid 976
+Execution time 232 ms
+> Checking out baseline
+Previous HEAD position was b9a3315... Fix profiling scripts.
+Switched to branch 'baseline'
+Your branch is up-to-date with 'origin/baseline'.
+
+* Running warm-up build #2 with build tasks [assemble]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@72704789.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 7s
+6 actionable tasks: 6 executed
+Used daemon with pid 976
+Execution time 7296 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Running warm-up build #3 with cleanup tasks [clean]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@31731122.*]
+:clean
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 0s
+1 actionable task: 1 executed
+Used daemon with pid 976
+Execution time 191 ms
+> Checking out baseline
+Previous HEAD position was b9a3315... Fix profiling scripts.
+Switched to branch 'baseline'
+Your branch is up-to-date with 'origin/baseline'.
+
+* Running warm-up build #3 with build tasks [assemble]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@70fae354.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 6s
+6 actionable tasks: 6 executed
+Used daemon with pid 976
+Execution time 6920 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Running warm-up build #4 with cleanup tasks [clean]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@4cdc33d5.*]
+:clean
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 0s
+1 actionable task: 1 executed
+Used daemon with pid 976
+Execution time 173 ms
+> Checking out baseline
+Previous HEAD position was b9a3315... Fix profiling scripts.
+Switched to branch 'baseline'
+Your branch is up-to-date with 'origin/baseline'.
+
+* Running warm-up build #4 with build tasks [assemble]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@1b19c470.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 7s
+6 actionable tasks: 6 executed
+Used daemon with pid 976
+Execution time 7120 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Running warm-up build #5 with cleanup tasks [clean]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@40025e97.*]
+:clean
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 0s
+1 actionable task: 1 executed
+Used daemon with pid 976
+Execution time 166 ms
+> Checking out baseline
+Previous HEAD position was b9a3315... Fix profiling scripts.
+Switched to branch 'baseline'
+Your branch is up-to-date with 'origin/baseline'.
+
+* Running warm-up build #5 with build tasks [assemble]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@7d251e36.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 6s
+6 actionable tasks: 6 executed
+Used daemon with pid 976
+Execution time 6861 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Using args for instrumented builds:
+
+* Starting profiler for daemon with pid 976
+
+* Running measured build #1 with cleanup tasks [clean]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@1242f5dd.*]
+:clean
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 0s
+1 actionable task: 1 executed
+Used daemon with pid 976
+Execution time 156 ms
+> Checking out baseline
+Previous HEAD position was b9a3315... Fix profiling scripts.
+Switched to branch 'baseline'
+Your branch is up-to-date with 'origin/baseline'.
+
+* Running measured build #1 with build tasks [assemble]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@2d3931c8.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 7s
+6 actionable tasks: 6 executed
+Used daemon with pid 976
+Execution time 8006 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Stopping profiler for daemon with pid 976
+
+* Stopping daemons
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Running scenario assemble_error_prone using Gradle 4.6 (scenario 2/2)
+
+* Stopping daemons
+No Gradle daemons are running.
+
+* Build details
+Gradle version: 4.6
+Java home: /usr/lib/jvm/java-9-oracle
+OS name: Linux 4.4.0-119-generic
+JVM args:
+  -Dfile.encoding=UTF-8
+  -Duser.country=US
+  -Duser.language=en
+  -Duser.variant
+  -Dorg.gradle.profiler.scenario=assemble_error_prone
+  -agentpath:/home/build_user/jprofiler10/bin/linux-x64/libjprofilerti.so=offline,id=1,config=/tmp/jprofiler5208931346592457848.xml,sysprop=jprofiler.jmxServerPort=34381
+Gradle args:
+  -I
+  /tmp/gradleProfilerPidInstrumentation8992623972566703592.gradle
+  --gradle-user-home
+  /opt/projects/error-prone-performance/gradle-user-home
+> Resetting Git hard
+HEAD is now at b9a3315 Fix profiling scripts.
+HEAD detached at b9a3315
+nothing to commit, working directory clean
+
+* Running warm-up build #1 with cleanup tasks [clean]
+JProfiler> WARNING: No authentication for JMX server specified.
+JProfiler> Pass -Djprofiler.jmxPasswordFile=<file> to set up authentication
+JProfiler> JMX server started, use jpcontroller to connect
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@7fbb0173.*]
+:clean
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 5s
+1 actionable task: 1 executed
+Used daemon with pid 2599
+Execution time 5702 ms
+> Checking out rxjava/error-prone-javac-plugin-default
+Previous HEAD position was b9a3315... Fix profiling scripts.
+Switched to a new branch 'rxjava/error-prone-javac-plugin-default'
+Branch rxjava/error-prone-javac-plugin-default set up to track remote branch rxjava/error-prone-javac-plugin-default from origin.
+
+* Running warm-up build #1 with build tasks [assemble]
+Download https://plugins.gradle.org/m2/net/ltgt/gradle/gradle-errorprone-javacplugin-plugin/0.1/gradle-errorprone-javacplugin-plugin-0.1.pom
+Download https://plugins.gradle.org/m2/net/ltgt/gradle/gradle-errorprone-javacplugin-plugin/0.1/gradle-errorprone-javacplugin-plugin-0.1.jar
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@78eff5a3.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Scheduler.java:321: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public <S extends Scheduler & Disposable> S when(@NonNull Function<Flowable<Flowable<Completable>>, Completable> combine) {
+                                                ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/queue/SpscLinkedArrayQueue.java:57: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+        producerLookAhead = mask - 1; // we know it's all empty to start with
+                                 ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'producerLookAhead = mask - 1L;'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/processors/ReplayProcessor.java:588: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:36: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:45: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:83: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:102: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableRefCount.java:35: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractFlowableWithUpstream
+    final ConnectableFlowable<T> source;
+                                 ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableBufferTimed.java:249: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:240: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:292: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:326: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:335: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:217: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:277: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:338: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:344: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableWindowTimed.java:621: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastProcessor<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastProcessor<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:579: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:630: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:636: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:642: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/BlockingFlowableIterable.java:70: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+            this.limit = batchSize - (batchSize >> 2);
+                                   ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'this.limit = (long) batchSize - (batchSize >> 2);'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:68: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:72: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:236: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:281: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:315: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:324: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:213: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:256: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:300: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableRefCount.java:34: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractObservableWithUpstream
+    final ConnectableObservable<? extends T> source;
+                                             ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:466: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:517: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:523: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:529: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableWindowTimed.java:544: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastSubject<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastSubject<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableBufferTimed.java:238: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/ExceptionHelper.java:133: warning: [UnsynchronizedOverridesSynchronized] Unsynchronized method fillInStackTrace overrides synchronized method in Throwable
+        public Throwable fillInStackTrace() {
+                         ^
+    (see http://errorprone.info/bugpattern/UnsynchronizedOverridesSynchronized)
+  Did you mean 'public synchronized Throwable fillInStackTrace() {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/NotificationLite.java:179: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public static <T> T getValue(Object o) {
+                        ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/schedulers/SchedulerPoolFactory.java:71: warning: [FutureReturnValueIgnored] Return value of methods returning Future must be checked. Ignoring returned Futures suppresses exceptions thrown from the code that completes the Future.
+                    next.scheduleAtFixedRate(new ScheduledTask(), PURGE_PERIOD_SECONDS, PURGE_PERIOD_SECONDS, TimeUnit.SECONDS);
+                                            ^
+    (see http://errorprone.info/bugpattern/FutureReturnValueIgnored)
+  Did you mean to remove this line?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:645: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:652: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+47 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 24s
+6 actionable tasks: 6 executed
+Used daemon with pid 2599
+Execution time 24322 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Running warm-up build #2 with cleanup tasks [clean]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@635ddc15.*]
+:clean
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 0s
+1 actionable task: 1 executed
+Used daemon with pid 2599
+Execution time 640 ms
+> Checking out rxjava/error-prone-javac-plugin-default
+Previous HEAD position was b9a3315... Fix profiling scripts.
+Switched to branch 'rxjava/error-prone-javac-plugin-default'
+Your branch is up-to-date with 'origin/rxjava/error-prone-javac-plugin-default'.
+
+* Running warm-up build #2 with build tasks [assemble]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@6fe69692.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Scheduler.java:321: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public <S extends Scheduler & Disposable> S when(@NonNull Function<Flowable<Flowable<Completable>>, Completable> combine) {
+                                                ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/queue/SpscLinkedArrayQueue.java:57: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+        producerLookAhead = mask - 1; // we know it's all empty to start with
+                                 ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'producerLookAhead = mask - 1L;'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/processors/ReplayProcessor.java:588: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:36: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:45: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:83: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:102: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableRefCount.java:35: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractFlowableWithUpstream
+    final ConnectableFlowable<T> source;
+                                 ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableBufferTimed.java:249: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:240: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:292: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:326: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:335: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:217: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:277: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:338: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:344: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableWindowTimed.java:621: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastProcessor<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastProcessor<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:579: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:630: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:636: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:642: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/BlockingFlowableIterable.java:70: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+            this.limit = batchSize - (batchSize >> 2);
+                                   ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'this.limit = (long) batchSize - (batchSize >> 2);'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:68: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:72: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:236: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:281: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:315: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:324: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:213: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:256: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:300: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableRefCount.java:34: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractObservableWithUpstream
+    final ConnectableObservable<? extends T> source;
+                                             ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:466: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:517: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:523: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:529: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableWindowTimed.java:544: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastSubject<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastSubject<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableBufferTimed.java:238: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/ExceptionHelper.java:133: warning: [UnsynchronizedOverridesSynchronized] Unsynchronized method fillInStackTrace overrides synchronized method in Throwable
+        public Throwable fillInStackTrace() {
+                         ^
+    (see http://errorprone.info/bugpattern/UnsynchronizedOverridesSynchronized)
+  Did you mean 'public synchronized Throwable fillInStackTrace() {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/NotificationLite.java:179: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public static <T> T getValue(Object o) {
+                        ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/schedulers/SchedulerPoolFactory.java:71: warning: [FutureReturnValueIgnored] Return value of methods returning Future must be checked. Ignoring returned Futures suppresses exceptions thrown from the code that completes the Future.
+                    next.scheduleAtFixedRate(new ScheduledTask(), PURGE_PERIOD_SECONDS, PURGE_PERIOD_SECONDS, TimeUnit.SECONDS);
+                                            ^
+    (see http://errorprone.info/bugpattern/FutureReturnValueIgnored)
+  Did you mean to remove this line?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:645: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:652: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+47 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 17s
+6 actionable tasks: 6 executed
+Used daemon with pid 2599
+Execution time 17494 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Running warm-up build #3 with cleanup tasks [clean]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@45bd880a.*]
+:clean
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 0s
+1 actionable task: 1 executed
+Used daemon with pid 2599
+Execution time 533 ms
+> Checking out rxjava/error-prone-javac-plugin-default
+Previous HEAD position was b9a3315... Fix profiling scripts.
+Switched to branch 'rxjava/error-prone-javac-plugin-default'
+Your branch is up-to-date with 'origin/rxjava/error-prone-javac-plugin-default'.
+
+* Running warm-up build #3 with build tasks [assemble]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@38ed6fcd.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Scheduler.java:321: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public <S extends Scheduler & Disposable> S when(@NonNull Function<Flowable<Flowable<Completable>>, Completable> combine) {
+                                                ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/queue/SpscLinkedArrayQueue.java:57: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+        producerLookAhead = mask - 1; // we know it's all empty to start with
+                                 ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'producerLookAhead = mask - 1L;'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/processors/ReplayProcessor.java:588: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:36: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:45: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:83: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:102: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableRefCount.java:35: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractFlowableWithUpstream
+    final ConnectableFlowable<T> source;
+                                 ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableBufferTimed.java:249: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:240: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:292: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:326: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:335: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:217: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:277: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:338: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:344: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableWindowTimed.java:621: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastProcessor<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastProcessor<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:579: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:630: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:636: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:642: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/BlockingFlowableIterable.java:70: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+            this.limit = batchSize - (batchSize >> 2);
+                                   ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'this.limit = (long) batchSize - (batchSize >> 2);'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:68: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:72: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:236: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:281: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:315: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:324: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:213: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:256: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:300: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableRefCount.java:34: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractObservableWithUpstream
+    final ConnectableObservable<? extends T> source;
+                                             ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:466: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:517: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:523: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:529: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableWindowTimed.java:544: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastSubject<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastSubject<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableBufferTimed.java:238: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/ExceptionHelper.java:133: warning: [UnsynchronizedOverridesSynchronized] Unsynchronized method fillInStackTrace overrides synchronized method in Throwable
+        public Throwable fillInStackTrace() {
+                         ^
+    (see http://errorprone.info/bugpattern/UnsynchronizedOverridesSynchronized)
+  Did you mean 'public synchronized Throwable fillInStackTrace() {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/NotificationLite.java:179: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public static <T> T getValue(Object o) {
+                        ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/schedulers/SchedulerPoolFactory.java:71: warning: [FutureReturnValueIgnored] Return value of methods returning Future must be checked. Ignoring returned Futures suppresses exceptions thrown from the code that completes the Future.
+                    next.scheduleAtFixedRate(new ScheduledTask(), PURGE_PERIOD_SECONDS, PURGE_PERIOD_SECONDS, TimeUnit.SECONDS);
+                                            ^
+    (see http://errorprone.info/bugpattern/FutureReturnValueIgnored)
+  Did you mean to remove this line?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:645: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:652: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+47 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 17s
+6 actionable tasks: 6 executed
+Used daemon with pid 2599
+Execution time 17951 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Running warm-up build #4 with cleanup tasks [clean]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@6cb79e9b.*]
+:clean
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 0s
+1 actionable task: 1 executed
+Used daemon with pid 2599
+Execution time 514 ms
+> Checking out rxjava/error-prone-javac-plugin-default
+Previous HEAD position was b9a3315... Fix profiling scripts.
+Switched to branch 'rxjava/error-prone-javac-plugin-default'
+Your branch is up-to-date with 'origin/rxjava/error-prone-javac-plugin-default'.
+
+* Running warm-up build #4 with build tasks [assemble]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@3e499061.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Scheduler.java:321: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public <S extends Scheduler & Disposable> S when(@NonNull Function<Flowable<Flowable<Completable>>, Completable> combine) {
+                                                ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/queue/SpscLinkedArrayQueue.java:57: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+        producerLookAhead = mask - 1; // we know it's all empty to start with
+                                 ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'producerLookAhead = mask - 1L;'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/processors/ReplayProcessor.java:588: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:36: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:45: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:83: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:102: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableRefCount.java:35: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractFlowableWithUpstream
+    final ConnectableFlowable<T> source;
+                                 ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableBufferTimed.java:249: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:240: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:292: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:326: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:335: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:217: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:277: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:338: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:344: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableWindowTimed.java:621: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastProcessor<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastProcessor<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:579: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:630: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:636: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:642: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/BlockingFlowableIterable.java:70: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+            this.limit = batchSize - (batchSize >> 2);
+                                   ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'this.limit = (long) batchSize - (batchSize >> 2);'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:68: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:72: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:236: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:281: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:315: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:324: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:213: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:256: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:300: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableRefCount.java:34: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractObservableWithUpstream
+    final ConnectableObservable<? extends T> source;
+                                             ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:466: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:517: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:523: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:529: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableWindowTimed.java:544: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastSubject<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastSubject<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableBufferTimed.java:238: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/ExceptionHelper.java:133: warning: [UnsynchronizedOverridesSynchronized] Unsynchronized method fillInStackTrace overrides synchronized method in Throwable
+        public Throwable fillInStackTrace() {
+                         ^
+    (see http://errorprone.info/bugpattern/UnsynchronizedOverridesSynchronized)
+  Did you mean 'public synchronized Throwable fillInStackTrace() {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/NotificationLite.java:179: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public static <T> T getValue(Object o) {
+                        ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/schedulers/SchedulerPoolFactory.java:71: warning: [FutureReturnValueIgnored] Return value of methods returning Future must be checked. Ignoring returned Futures suppresses exceptions thrown from the code that completes the Future.
+                    next.scheduleAtFixedRate(new ScheduledTask(), PURGE_PERIOD_SECONDS, PURGE_PERIOD_SECONDS, TimeUnit.SECONDS);
+                                            ^
+    (see http://errorprone.info/bugpattern/FutureReturnValueIgnored)
+  Did you mean to remove this line?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:645: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:652: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+47 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 17s
+6 actionable tasks: 6 executed
+Used daemon with pid 2599
+Execution time 17879 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Running warm-up build #5 with cleanup tasks [clean]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@3d5419dc.*]
+:clean
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 0s
+1 actionable task: 1 executed
+Used daemon with pid 2599
+Execution time 481 ms
+> Checking out rxjava/error-prone-javac-plugin-default
+Previous HEAD position was b9a3315... Fix profiling scripts.
+Switched to branch 'rxjava/error-prone-javac-plugin-default'
+Your branch is up-to-date with 'origin/rxjava/error-prone-javac-plugin-default'.
+
+* Running warm-up build #5 with build tasks [assemble]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@9cdda87.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Scheduler.java:321: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public <S extends Scheduler & Disposable> S when(@NonNull Function<Flowable<Flowable<Completable>>, Completable> combine) {
+                                                ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/queue/SpscLinkedArrayQueue.java:57: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+        producerLookAhead = mask - 1; // we know it's all empty to start with
+                                 ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'producerLookAhead = mask - 1L;'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/processors/ReplayProcessor.java:588: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:36: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:45: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:83: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:102: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableRefCount.java:35: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractFlowableWithUpstream
+    final ConnectableFlowable<T> source;
+                                 ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableBufferTimed.java:249: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:240: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:292: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:326: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:335: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:217: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:277: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:338: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:344: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableWindowTimed.java:621: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastProcessor<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastProcessor<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:579: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:630: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:636: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:642: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/BlockingFlowableIterable.java:70: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+            this.limit = batchSize - (batchSize >> 2);
+                                   ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'this.limit = (long) batchSize - (batchSize >> 2);'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:68: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:72: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:236: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:281: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:315: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:324: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:213: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:256: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:300: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableRefCount.java:34: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractObservableWithUpstream
+    final ConnectableObservable<? extends T> source;
+                                             ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:466: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:517: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:523: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:529: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableWindowTimed.java:544: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastSubject<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastSubject<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableBufferTimed.java:238: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/ExceptionHelper.java:133: warning: [UnsynchronizedOverridesSynchronized] Unsynchronized method fillInStackTrace overrides synchronized method in Throwable
+        public Throwable fillInStackTrace() {
+                         ^
+    (see http://errorprone.info/bugpattern/UnsynchronizedOverridesSynchronized)
+  Did you mean 'public synchronized Throwable fillInStackTrace() {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/NotificationLite.java:179: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public static <T> T getValue(Object o) {
+                        ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/schedulers/SchedulerPoolFactory.java:71: warning: [FutureReturnValueIgnored] Return value of methods returning Future must be checked. Ignoring returned Futures suppresses exceptions thrown from the code that completes the Future.
+                    next.scheduleAtFixedRate(new ScheduledTask(), PURGE_PERIOD_SECONDS, PURGE_PERIOD_SECONDS, TimeUnit.SECONDS);
+                                            ^
+    (see http://errorprone.info/bugpattern/FutureReturnValueIgnored)
+  Did you mean to remove this line?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:645: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:652: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+47 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 18s
+6 actionable tasks: 6 executed
+Used daemon with pid 2599
+Execution time 18018 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Using args for instrumented builds:
+
+* Starting profiler for daemon with pid 2599
+
+* Running measured build #1 with cleanup tasks [clean]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@733718f7.*]
+:clean
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 0s
+1 actionable task: 1 executed
+Used daemon with pid 2599
+Execution time 458 ms
+> Checking out rxjava/error-prone-javac-plugin-default
+Previous HEAD position was b9a3315... Fix profiling scripts.
+Switched to branch 'rxjava/error-prone-javac-plugin-default'
+Your branch is up-to-date with 'origin/rxjava/error-prone-javac-plugin-default'.
+
+* Running measured build #1 with build tasks [assemble]
+JMH: [.*me.champeau.gradle.JMHPluginExtension_Decorated@379f3936.*]
+:compileJavawarning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Scheduler.java:321: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public <S extends Scheduler & Disposable> S when(@NonNull Function<Flowable<Flowable<Completable>>, Completable> combine) {
+                                                ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/queue/SpscLinkedArrayQueue.java:57: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+        producerLookAhead = mask - 1; // we know it's all empty to start with
+                                 ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'producerLookAhead = mask - 1L;'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/processors/ReplayProcessor.java:588: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:36: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:45: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+        this.resources = new LinkedList<Disposable>();
+                         ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.resources = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:83: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/disposables/ListCompositeDisposable.java:102: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+                        set = new LinkedList<Disposable>();
+                              ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'set = new ArrayList<Disposable>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableRefCount.java:35: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractFlowableWithUpstream
+    final ConnectableFlowable<T> source;
+                                 ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableBufferTimed.java:249: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:240: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:292: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:326: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableGroupJoin.java:335: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:217: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:277: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:338: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableJoin.java:344: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableWindowTimed.java:621: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastProcessor<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastProcessor<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:579: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:630: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:636: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/FlowableReplay.java:642: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/flowable/BlockingFlowableIterable.java:70: warning: [IntLongMath] Expression of type int may overflow before being assigned to a long
+            this.limit = batchSize - (batchSize >> 2);
+                                   ^
+    (see http://errorprone.info/bugpattern/IntLongMath)
+  Did you mean 'this.limit = (long) batchSize - (batchSize >> 2);'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:68: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/LinkedArrayList.java:72: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:236: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:281: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:315: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableGroupJoin.java:324: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_CLOSE)) {' or 'else if (mode.equals(RIGHT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:213: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    if (mode == LEFT_VALUE) {
+                             ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'if (Objects.equals(mode, LEFT_VALUE)) {' or 'if (mode.equals(LEFT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:256: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == RIGHT_VALUE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, RIGHT_VALUE)) {' or 'else if (mode.equals(RIGHT_VALUE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableJoin.java:300: warning: [ReferenceEquality] Comparison using reference equality instead of value equality
+                    else if (mode == LEFT_CLOSE) {
+                                  ^
+    (see http://errorprone.info/bugpattern/ReferenceEquality)
+  Did you mean 'else if (Objects.equals(mode, LEFT_CLOSE)) {' or 'else if (mode.equals(LEFT_CLOSE)) {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableRefCount.java:34: warning: [HidingField] Hiding fields of superclasses may cause confusion and errors. This field is hiding a field of the same name in superclass: AbstractObservableWithUpstream
+    final ConnectableObservable<? extends T> source;
+                                             ^
+    (see http://errorprone.info/bugpattern/HidingField)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:466: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+        <U> U index() {
+              ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:517: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:523: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableReplay.java:529: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableWindowTimed.java:544: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.windows = new LinkedList<UnicastSubject<T>>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.windows = new ArrayList<UnicastSubject<T>>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/operators/observable/ObservableBufferTimed.java:238: warning: [JdkObsolete] It is very rare for LinkedList to out-perform ArrayList or ArrayDeque. Avoid it unless you're willing to invest a lot of time into benchmarking. Caveat: LinkedList supports null elements, but ArrayDeque does not.
+            this.buffers = new LinkedList<U>();
+                           ^
+    (see http://errorprone.info/bugpattern/JdkObsolete)
+  Did you mean 'this.buffers = new ArrayList<U>();'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/ExceptionHelper.java:133: warning: [UnsynchronizedOverridesSynchronized] Unsynchronized method fillInStackTrace overrides synchronized method in Throwable
+        public Throwable fillInStackTrace() {
+                         ^
+    (see http://errorprone.info/bugpattern/UnsynchronizedOverridesSynchronized)
+  Did you mean 'public synchronized Throwable fillInStackTrace() {'?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/util/NotificationLite.java:179: warning: [TypeParameterUnusedInFormals] Declaring a type parameter that is only used in the return type is a misuse of generics: operations on the type parameter are unchecked, it hides unsafe casts at invocations of the method, and it interacts badly with method overload resolution.
+    public static <T> T getValue(Object o) {
+                        ^
+    (see http://errorprone.info/bugpattern/TypeParameterUnusedInFormals)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/internal/schedulers/SchedulerPoolFactory.java:71: warning: [FutureReturnValueIgnored] Return value of methods returning Future must be checked. Ignoring returned Futures suppresses exceptions thrown from the code that completes the Future.
+                    next.scheduleAtFixedRate(new ScheduledTask(), PURGE_PERIOD_SECONDS, PURGE_PERIOD_SECONDS, TimeUnit.SECONDS);
+                                            ^
+    (see http://errorprone.info/bugpattern/FutureReturnValueIgnored)
+  Did you mean to remove this line?
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:645: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/subjects/ReplaySubject.java:652: warning: [NonAtomicVolatileUpdate] This update of a volatile variable is non-atomic
+            size++;
+                ^
+    (see http://errorprone.info/bugpattern/NonAtomicVolatileUpdate)
+47 warnings
+
+:processResources NO-SOURCE
+:classes
+:osgiClasses
+:jar
+:javadoc/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                     ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                      ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xC2) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                               ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/FlowableSubscriber.java:21: error: unmappable character (0xA7) for encoding US-ASCII
+ * and weakens rules ??1.3 and ??3.9 of the specification for gaining performance.
+                                ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14289: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??1.3: onNext should not be called concurrently until onSubscribe returns.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14291: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.3: onError or onComplete must not call cancel.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14293: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??2.12: onSubscribe must be called at most once on the same instance.
+            ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xC2) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+           ^
+/opt/projects/error-prone-performance-copy/rxjava/src/main/java/io/reactivex/Flowable.java:14296: error: unmappable character (0xA7) for encoding US-ASCII
+     * <li>??3.9: negative requests should emit an onError(IllegalArgumentException).
+            ^
+
+12 errors
+:javadocJar
+:sourcesJar
+:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 21s
+6 actionable tasks: 6 executed
+Used daemon with pid 2599
+Execution time 21756 ms
+> Checking out b9a3315ec41bb4e51d410c992a0ec320c5cae5e4
+Note: checking out 'b9a3315ec41bb4e51d410c992a0ec320c5cae5e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b9a3315... Fix profiling scripts.
+
+* Stopping profiler for daemon with pid 2599
+
+* Stopping daemons
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Results written to /opt/projects/error-prone-performance/profile-out-6
+  /opt/projects/error-prone-performance/profile-out-6/assemble_error_prone/assemble_error_prone-4.6.jps
+  /opt/projects/error-prone-performance/profile-out-6/assemble_baseline/assemble_baseline-4.6.jps
+

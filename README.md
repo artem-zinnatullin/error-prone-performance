@@ -2,6 +2,8 @@
 
 Current test subject is [RxJava](https://github.com/ReactiveX/RxJava) 2.x project (Apache 2.0)
 
+Upstream issue about performance: [google/error-prone/issues/994](https://github.com/google/error-prone/issues/994)
+
 I integrate [Error Prone](https://github.com/google/error-prone) with RxJava and provide ways to benchmark and profile builds with Error Prone, with slightly optimized Error Prone configuration and without Error Prone.
 
 Table of contents:

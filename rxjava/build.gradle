@@ -82,6 +82,10 @@ dependencies {
     errorprone "com.google.errorprone:error_prone_core:2.2.0"
 }
 
+tasks.withType(JavaCompile) {
+  options.compilerArgs += [ '-XepDisableAllChecks' ]
+}
+
 javadoc {
     failOnError = false
     exclude "**/internal/**"

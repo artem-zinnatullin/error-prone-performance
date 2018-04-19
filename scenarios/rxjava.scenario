@@ -21,3 +21,11 @@ assemble_error_prone_disable_expensive_checks {
         build = "rxjava/error-prone-disable-expensive-checks"
     }   
 }
+
+assemble_error_prone_disable_all_checks {
+    tasks = ["assemble"]
+    cleanup-tasks = ["clean"]
+    git-checkout = {
+        build = "rxjava/error-prone-disable-all-checks"
+    }
+}

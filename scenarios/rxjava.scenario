@@ -34,6 +34,6 @@ assemble_error_prone_patched_cache_classloader {
     tasks = ["assemble"]
     cleanup-tasks = ["clean"]
     git-checkout = {
-        build = "az/rxjava-error-prone-default-patch-egp"
+        build = "az/rxjava-error-prone-default-patch-epg"
     }
 }

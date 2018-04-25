@@ -5,6 +5,7 @@ buildscript {
     maven {
         url "https://plugins.gradle.org/m2/"
     }
+    mavenLocal()
   }
   dependencies {
     classpath "ru.vyarus:gradle-animalsniffer-plugin:1.2.0"
@@ -12,6 +13,7 @@ buildscript {
     classpath "me.champeau.gradle:jmh-gradle-plugin:0.4.4"
     classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3"
     classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.5.2"
+    classpath "net.ltgt.gradle:gradle-errorprone-plugin:0.0.13-artem"
   }
 }
 
@@ -44,6 +46,7 @@ apply plugin: "com.github.hierynomus.license"
 apply plugin: "com.jfrog.bintray"
 apply plugin: "com.jfrog.artifactory"
 apply plugin: "eclipse"
+apply plugin: "net.ltgt.errorprone"
 
 sourceCompatibility = JavaVersion.VERSION_1_6
 targetCompatibility = JavaVersion.VERSION_1_6
@@ -76,6 +79,8 @@ dependencies {
     testImplementation "org.reactivestreams:reactive-streams-tck:$reactiveStreamsVersion"
     testImplementation "org.testng:testng:$testNgVersion"
     testImplementation "com.google.guava:guava:$guavaVersion"
+
+    errorprone "com.google.errorprone:error_prone_core:2.2.0"
 }
 
 javadoc {

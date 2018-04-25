@@ -25,6 +25,7 @@ git clone https://github.com/artem-zinnatullin/gradle-errorprone-plugin.git /opt
 cd /opt/projects/gradle-errorprone-plugin && \
 git checkout az/cache-classloader && \
 ./gradlew publishToMavenLocal && \
+./gradlew --stop && \
 cd /opt/projects/error-prone-performance && \
 echo 'Starting error-prone benchmark on rxjava project...' && \
 /opt/projects/gradle-profiler/build/install/gradle-profiler/bin/gradle-profiler \

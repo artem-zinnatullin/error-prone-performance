@@ -14,26 +14,10 @@ assemble_error_prone {
     }
 }
 
-assemble_error_prone_disable_expensive_checks {
-    tasks = ["assemble"]
-    cleanup-tasks = ["clean"]
-    git-checkout = {
-        build = "rxjava/error-prone-disable-expensive-checks"
-    }   
-}
-
-assemble_error_prone_disable_all_checks {
-    tasks = ["assemble"]
-    cleanup-tasks = ["clean"]
-    git-checkout = {
-        build = "rxjava/error-prone-disable-all-checks"
-    }
-}
-
 assemble_error_prone_patched_cache_classloader {
     tasks = ["assemble"]
     cleanup-tasks = ["clean"]
     git-checkout = {
-        build = "az/rxjava-error-prone-default-patch-epg"
+        build = "az/rxjava/error-prone-default-patch-epg"
     }
 }

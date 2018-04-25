@@ -20,6 +20,11 @@ error-prone-performance-oracle-jdk8:latest \
 bash -c \
 "echo 'Isolating mounted dir from changes generated during benchmark (can take a few moments on macOS)...' && \
 cp -r /opt/projects/error-prone-performance /opt/projects/error-prone-performance-copy && \
+echo 'Building patched version of Error Prone Gradle Plugin...' && \
+git clone https://github.com/artem-zinnatullin/gradle-errorprone-plugin.git /opt/projects/gradle-errorprone-plugin && \
+cd /opt/projects/gradle-errorprone-plugin && \
+git checkout az/cache-classloader && \
+./gradlew publishToMavenLocal && \
 cd /opt/projects/error-prone-performance && \
 echo 'Starting error-prone benchmark on rxjava project...' && \
 /opt/projects/gradle-profiler/build/install/gradle-profiler/bin/gradle-profiler \
